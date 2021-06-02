@@ -17,7 +17,10 @@ Main Screen
     -[ ] Provides a button that allows a user to save this movie to their favorites list.
 
 ### Running Instructions
-- Add API key to [APIConstants.kt](app/src/main/java/com/ambrosio.movietrove/network/APIConstants.kt)
+- Add API key to [APIConstants.kt](app/src/main/java/com/ambrosio/movietrove/network/APIConstants.kt)
+
+### APK
+- [apk](movieTrove.apk)
 
 ### Preview
 
@@ -27,5 +30,3 @@ Home screen
 Movie Detail
 ![Detail](detail.png)
 
-### APK
-- [apk](movieTrove.apk)
