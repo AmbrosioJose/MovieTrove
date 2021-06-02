@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--dark-->
+    <color name="colorPrimary">#FF000000</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorAccent">#E50914</color>
+
+    <color name="colorBackground">#030406</color>
+    <color name="colorCardBackground">#FFFFFF</color>
+    <color name="colorTitle60">#66666666</color>
+    <color name="colorNumber">#000000</color>
+    <color name="colorBtnBackground">#FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorBackgroundDay">#F0F0F0</color>
+    <color name="colorCardBackgroundDay">#FFFFFF</color>
+    <color name="colorTitle60Day">#99000000</color>
+    <color name="colorNumberDay">#000000</color>
+    <color name="colorBtnBackgroundDay">#FFFFFF</color>
+
+</resources>

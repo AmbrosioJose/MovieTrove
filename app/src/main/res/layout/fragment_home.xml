@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.HomeFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/now_playing"
+        android:textColor="@color/white"
+        android:paddingStart="@dimen/item_margin_default"
+        android:paddingEnd="@dimen/item_margin_default"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nowPlayingRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/popular"
+        android:textColor="@color/white"
+        android:paddingStart="@dimen/item_margin_default"
+        android:paddingEnd="@dimen/item_margin_default"
+        android:layout_marginTop="@dimen/item_margin_large"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/popularRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        />
+
+</LinearLayout>
