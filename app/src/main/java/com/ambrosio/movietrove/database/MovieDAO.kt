@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Update
 import androidx.room.Query
+import com.ambrosio.movietrove.models.MOVIE_TABLE
 import com.ambrosio.movietrove.models.Movie
 
 @Dao
@@ -22,7 +23,7 @@ interface MovieDAO {
     @Delete
     fun deleteMovie(movieEntity: Movie)
 
-    @Query("SELECT * FROM movie")
+    @Query("SELECT * FROM $MOVIE_TABLE")
     fun retrieveMovies(): MutableList<Movie>
 
 }
