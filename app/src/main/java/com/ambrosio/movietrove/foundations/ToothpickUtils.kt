@@ -1,6 +1,8 @@
 package com.ambrosio.movietrove.foundations
 
-//import com.ambrosio.movietrove.database.MovieLocalModel
+import com.ambrosio.movietrove.database.GenreLocalModel
+import com.ambrosio.movietrove.database.MovieLocalModel
+import com.ambrosio.movietrove.models.IGenreModel
 import com.ambrosio.movietrove.models.IMovieModel
 import toothpick.Scope
 import toothpick.Toothpick
@@ -15,6 +17,7 @@ object ApplicationScope {
 
 object ApplicationModule: Module(){
     init{
-//        bind(IMovieModel::class.java).toInstance(MovieLocalModel())
+        bind(IMovieModel::class.java).toInstance(MovieLocalModel())
+        bind(IGenreModel::class.java).toInstance(GenreLocalModel())
     }
 }

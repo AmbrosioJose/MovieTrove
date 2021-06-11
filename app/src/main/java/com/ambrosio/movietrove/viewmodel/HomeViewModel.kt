@@ -11,19 +11,21 @@ import com.ambrosio.movietrove.network.API_KEY
 import com.ambrosio.movietrove.network.RetroInstance
 import com.ambrosio.movietrove.network.Service
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import toothpick.Toothpick
 import javax.inject.Inject
 
 class HomeViewModel: ViewModel() {
+
+    @Inject
+    lateinit var model: IMovieModel
+
     private var nowPlayingLiveData : MutableLiveData<RecyclerList> = MutableLiveData()
     private var popularLiveData : MutableLiveData<RecyclerList> = MutableLiveData()
 
-//    @Inject
-//    lateinit var model: IMovieModel
-
     init {
-//        Toothpick.inject(this, ApplicationScope.scope)
+        Toothpick.inject(this, ApplicationScope.scope)
     }
 
     fun getNowPlayingListObserver(): MutableLiveData<RecyclerList> {
@@ -42,9 +44,13 @@ class HomeViewModel: ViewModel() {
                 page = 1)
             val movies: List<Movie>? = response.results
             if(!movies.isNullOrEmpty())
-//                model.addMovies(movies){ success ->
-//                    println("Saving movie models = $success")
-//                }
+                GlobalScope.launch {
+                    model?.let {
+                        it.addMovies(movies){ success ->
+                            println("Saving movie models = $success")
+                        }
+                    }
+                }
             nowPlayingLiveData.postValue(RecyclerList(movies as ArrayList<Movie>))
         }
     }

@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 import androidx.room.ColumnInfo
 import com.google.gson.annotations.SerializedName
 
-
-@Entity(tableName = "movie")
+const val MOVIE_TABLE: String = "movie"
+@Entity(tableName = MOVIE_TABLE)
 data class Movie (
 
     @SerializedName("id")
@@ -41,7 +41,11 @@ data class Movie (
 
     @SerializedName("vote_average")
     @ColumnInfo(name = "vote_average")
-    val voteAverage: Float = 0.0f
+    val voteAverage: Float = 0.0f,
+
+    @SerializedName("genres")
+    @ColumnInfo(name = "genres")
+    val genres: List<Int> = listOf(),
 
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
